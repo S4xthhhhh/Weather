@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./Assets/clear.png" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="screen">
+        <div class="card">
+            <div class="element">
+                <p id="temperature"><span id="temp">--</span><sup>o</sup>C</p>
+                <img src="./Assets/clear.png" alt="condition" id="condition-pic">
+                <p id="condition">Loading...</p>
+                <div class="quote">
+                    <p id="quote">Please wait while searching for Quotes</p>
+                    <p id="author">-<span id="author-name">-</span></p>
+                </div>
+                <div class="humidity">
+                    <div class="wind">
+                        <img src="./Assets/wind.png" alt="wind">
+                        <label for="wind" style="font-size: 20px;color: white;"><span id="wind">--</span>Km/hr</label>
+                    </div>
+                    <div class="wind">
+                        <img src="./Assets/humidity.png" alt="humidity">
+                        <label for="wind" style="font-size: 20px;color: white;"><span id="humidity">--</span>%</label>
+                </div>
+            </div>
+            <button id="refresh" onclick="navigator.geolocation.getCurrentPosition(sucess,error)"><img src="./arrow-clockwise.svg" alt="refresh"></button>
+        </div>
+    </div>
+    <footer>
+        <p>Incase of errors contact: <a href="https://www.linkedin.com/in/sangeeth-s-devan-630b1a28a/" target="_blank">&copy;Me👓</a></p>
+    </footer>
+</body>
+</html>
