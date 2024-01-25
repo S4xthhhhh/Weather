@@ -26,7 +26,7 @@ async function getWeather(longitude,latitude){
   document.getElementById("wind").innerHTML=response.wind.speed;
 
   const condition = response.weather[0].main;
-  console.log(condition)
+  
 
 
   if(condition==="Clear"){
