@@ -26,6 +26,7 @@ async function getWeather(longitude,latitude){
   document.getElementById("wind").innerHTML=response.wind.speed;
 
   const condition = response.weather[0].main;
+  console.log(condition)
 
 
   if(condition==="Clear"){
@@ -34,7 +35,7 @@ async function getWeather(longitude,latitude){
     document.getElementById("condition-pic").src="./Assets/rain.png"
   }else if(condition==="Snow"){
     document.getElementById("condition-pic").src="./Assets/snow.png"
-  }else if(condition==="Cloud"){
+  }else if(condition==="Clouds"){
     document.getElementById("condition-pic").src="./Assets/cloud.png"
   }else if(condition==="Drizzle"){
     document.getElementById("condition-pic").src="./Assets/drizzle.png"
