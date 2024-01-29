@@ -77,3 +77,21 @@ footer{
 footer a{
     text-decoration: none;
 }
+.search-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#search{
+    padding: 10px;
+    border-radius: 60px;
+    background-color: #393053;
+}
+#search-input{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    width: 200px;;
+    border: 2px solid #393053;
+}

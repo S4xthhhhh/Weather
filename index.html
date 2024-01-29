@@ -14,7 +14,12 @@
 <body>
     <div class="screen">
         <div class="card">
+            <div class="search-part">
+                <input type="text" placeholder="Seach by City Name" id="search-input">
+                <button id="search" onclick="getWeatherbyCity()"><img src="./search.svg" alt=""></button>
+            </div>
             <div class="element">
+                <p id="place"></p>
                 <p id="temperature"><span id="temp">--</span><sup>o</sup>C</p>
                 <img src="./Assets/clear.png" alt="condition" id="condition-pic">
                 <p id="condition">Loading...</p>
