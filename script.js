@@ -27,6 +27,7 @@ async function getWeather(longitude, latitude) {
   document.getElementById("humidity").innerHTML = response.main.humidity;
   document.getElementById("wind").innerHTML = response.wind.speed;
   document.getElementById("place").innerHTML = response.name;
+  document.getElementById("error").style.display="none";
 
   const condition = response.weather[0].main;
 
@@ -58,7 +59,7 @@ async function getWeatherbyCity() {
   let response = await data.json();
 
   if (response.cod == 404) {
-    
+    document.getElementById("error").style.display="block";
   } else {
     document.getElementById("temp").innerHTML = response.main.feels_like;
     document.getElementById("condition").innerHTML =
@@ -88,5 +89,7 @@ async function getWeatherbyCity() {
         document.getElementById("condition-pic").src = "./Assets/drizzle.png";
       }
       getQuote()
+
+      document.getElementById("error").style.display="none";
   }
 }
